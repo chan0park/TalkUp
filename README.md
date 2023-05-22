@@ -26,8 +26,8 @@ We have included the annotation UI HTML file used during the data collection pro
 ## Paper Reference
 If you use this dataset in your research or refer to it, please cite the following paper:
 > **TalkUp: A Novel Dataset Paving the Way for Understanding Empowering Language**<br>
-> Authors: [Insert authors' names]<br>
-> Conference/Journal: [Insert conference/journal name]
+> Authors: Lucille Njoo*, Chan Young Park*, Octavia Stappart, Marvin Thielk, Yi Chu, and Yulia Tsvetkov<br>
+> arXiv link: *To be updated*.
 
 ## Contact Information
 For any questions related to the TalkUp dataset, please contact `chanyoun@cs.cmu.edu`. We welcome feedback and suggestions to improve the data set.
