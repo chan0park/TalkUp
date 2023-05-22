@@ -1,0 +1,153 @@
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+<crowd-form>
+    <p><span style="color:red">If you have not read the instructions, please read them carefully before starting the annotation task. This is a very subjective task, so some variation in answers is expected, but HITs can be rejected if the annotations clearly do not follow the instructions.</span></p>
+    <hr>
+    <div>
+        <p>The following post was written by a <b>${poster}</b> in the <b>${subreddit}</b> subreddit:</p>
+        <span style="color:blue"><p><strong> Post: </strong> ${post}</p></span>
+        <p><strong> An Example of a Reader's Response: </strong> ${response}</p>
+    </div>
+    <br>
+  <p><b>Q1. Rate how empowering or disempowering the <span style="color:blue">original post</span> is to a reader.</b><br>
+  <span style="color:gray"><b><i>Please remember that you’ll be annotating the original post, not the response. </i></b></span></p>
+    <div>
+      <input type="radio" id="disempowering" name="empowering" value="disempowering" required>
+      <label for="disempowering">Disempowering </label>
+      <input type="radio" id="maybe-disempowering" name="empowering" value="maybe-disempowering">
+      <label for="maybe-disempowering">Maybe Disempowering </label>
+      <input type="radio" id="neutral" name="empowering" value="neutral">
+      <label for="neutral">Neutral </label>
+      <input type="radio" id="maybe-empowering" name="empowering" value="maybe-empowering">
+      <label for="maybe-empowering">Maybe Empowering </label>
+      <input type="radio" id="empowering" name="empowering" value="empowering">
+      <label for="empowering">Empowering</label>
+    </div>
+    <br>
+    <p><b>Q1-2. Can this post be interpreted as either empowering or disempowering depending on what the poster meant?</b><br>
+    <span style="color:gray"><b><i>Select Yes only if you think the post is truly ambiguous.</b> If you're leaning towards empowering/disempowering, leave the answer as No.</i></span></p>
+        <div>
+      <input type="radio" id="no" name="ambiguity" value="no" checked>
+      <label for="no">No </label>
+      <input type="radio" id="yes" name="ambiguity" value="yes" required>
+      <label for="yes">Yes </label>
+    </div>
+    <br>
+    <p><b>Q2. If you said the post is empowering/disempowering, please select applicable reasons.</b></p>
+    <span style="color:gray"><b><i>Definitions of these reasons are in the instructions in the sidebar.</b> Leave this question blank if the post is neutral.</i></span></p>
+    <div>
+      <crowd-checkbox name="reasons" value="decision" style="width: 30%;">decision-making power</crowd-checkbox>
+      <crowd-checkbox name="reasons" value="options" style="width: 30%;">range of options to choose</crowd-checkbox>
+      <crowd-checkbox name="reasons" value="assertive" style="width: 30%;">can be assertive</crowd-checkbox>
+    </div>
+    <div>
+      <crowd-checkbox name="reasons" value="rights" style="width: 30%;">has rights</crowd-checkbox>
+      <crowd-checkbox name="reasons" value="changes" style="width: 30%;">capable of creating changes</crowd-checkbox>
+      <crowd-checkbox name="reasons" value="difference" style="width: 30%;">can make a difference</crowd-checkbox>
+     </div>
+    <div>
+      <crowd-checkbox name="reasons" value="critically" style="width: 30%;">think critically & different perspective</crowd-checkbox>
+      <crowd-checkbox name="reasons" value="emotion" style="width: 30%;">express their emotions</crowd-checkbox>
+      <crowd-checkbox name="reasons" value="alone" style="width: 30%;">not alone</crowd-checkbox>
+     </div>
+    <div>
+      <crowd-checkbox name="reasons" value="skill" style="width: 30%;">learn skills</crowd-checkbox>
+      <crowd-checkbox name="reasons" value="competency" style="width: 30%;">change perceptions of their competency</crowd-checkbox>
+      <crowd-checkbox name="reasons" value="true" style="width: 30%;">express true-self</crowd-checkbox>
+     </div>
+    <div>
+      <crowd-checkbox name="reasons" value="grow" style="width: 30%;">grow continuously</crowd-checkbox>
+      <crowd-checkbox name="reasons" value="positive" style="width: 30%;">positive self-image</crowd-checkbox>
+      <crowd-checkbox name="reasons" value="others" style="width: 30%;">others</crowd-checkbox>
+     </div>
+    <br>
+    <p><b>Q3. Does the responder agree with the poster?</b></p>
+    <div>
+      <input type="radio" id="disagree" name="stance" value="disagree" required>
+      <label for="disagree">Disagree </label>
+      <input type="radio" id="neutral" name="stance" value="neutral">
+      <label for="neutral">Neutral </label>
+      <input type="radio" id="agree" name="stance" value="agree">
+      <label for="agree">Agree </label>
+    </div>
+    <br>
+    </div>
+    <full-instructions>
+        <h1>Overview</h1>
+        <p>In this task, you will be asked to read a Reddit post and annotate whether it would be empowering to the reader (the person or group of people reading the post).</p>
+        <p>With each post, you will also see some accompanying contextual information, such as the reader’s response, the subreddit, and the gender of the poster and/or reader. Please remember that you’ll be annotating the original post, not the response. The response is shown only because it may provide useful context.</p>
+        <p>You’ll then rate how empowering or disempowering the post is, on a scale with “empowering” on one end, “neutral” in the middle, and “disempowering” on the other (Q1). You’ll also be asked to select which reasons the post would empower or disempower the reader (Q2).</p>
+        <p>Finally, you’ll be asked whether the poster and reader agree / share a similar perspective, or if they disagree / have opposing perspectives (Q3).</p>
+        <h1>Definition of Empowering, Disempowering, Neutral</h1>
+        <p><b>Empowering</b>: A post is empowering if it supports the reader’s rights, choices, self-fulfillment, or self-esteem. Empowering posts imply one or more of the following things about the reader, whether intentionally or unintentionally.</p>
+        <p><b>Disempowering</b>: A post is disempowering if it actively goes against the empowerment of the reader. This can mean denying their right to make choices, assuming they are ignorant, putting words in their mouth, imposing a point of view, drawing conclusions about their character.</p>
+        <p><b>Neutral</b>: A post is neutral if it does not contain any implications about the reader’s capability, power, etc. Text that only describes situations or expresses an opinion about an external topic is usually neutral. </p>
+
+        <h1>Empowerment/Disempowerment Reasons</h1>
+        <p>If you labeled a post as empowering or disempowering, select all reasons that explain why you think it is empowering/disempowering: </p>
+        <ol>
+            <li><b>Decision-making power</b>: The reader has the power to make their own decisions or influence decisions that affect them.</li>
+            <li><b>Range of options to choose from</b>: The reader has a range of options from which to make choices. They are not restricted to doing things a certain way, or restricted to only having a few limited options.</li>
+            <li><b>Can be assertive</b>: The reader can be assertive and confidently express what they want, need, prefer, like, or dislike.</li>
+            <li><b>Has rights</b>: The reader has rights. This can mean political rights, such as the right to vote. It can also mean broader rights, such as the right for everyone to be treated with dignity and respect.</li>
+            <li><b>Capable of creating change</b>: The reader is capable of creating change in their life or community.</li>
+            <li><b>Can make a difference</b>: The reader feels that they can make a difference as an individual. They are hopeful that their actions can have an impact on how things turn out. </li>
+            <li><b>Critical thinking and diverse perspectives</b>: The reader can think critically and see things from different perspectives.</li>
+            <li><b>Express their emotions</b>: The reader can express their own emotions, like anger and sadness, in a healthy way. Their emotions are valid. </li>
+            <li><b>Not alone</b>: The reader feels that they are not alone; they are part of a group. They can receive support from and provide support to others. </li>
+            <li><b>Learn new things</b>: The reader is able to learn new knowledge and skills.</li>
+            <li><b>Change perceptions of their competency</b>: The reader can change how others perceive them / their competency and capacity.</li>
+            <li><b>Express their true self</b>: The reader can come out of the closet / express who they really are.</li>
+            <li><b>Grow continuously</b>: The reader can grow and change continuously and on their own volition.</li>
+            <li><b>Positive self-image</b>: The reader can increase their positive self-image, feel good about themselves and their accomplishments, and overcome stigmas.</li>
+        </ol>
+        
+        <h1>Definition of Agreement of Poster and Reader</h1>
+        <p>For each poster and reader, we want to know whether they agree or disagree with each other on the topic of discussion.</p>
+        <p><b>Agree</b>: poster and reader support the same stance / point of view on the topic, whether they are talking about politics, sports teams, music preferences, or any other topic that they could take sides on. </p>
+        <p><b>Disagree</b>: they take opposing sides. </p>
+        <p><b>Neutral</b>: If the topic is not debatable (e.g. facts about the weather today) and / or there’s no indication that the poster and reader have any stance on the topic.</p>
+
+    </full-instructions>
+    <short-instructions>
+        <h1>Overview</h1>
+        <p>In this task, you will be asked to read a Reddit post and annotate whether it would be empowering to the reader.</p>
+        <p><b>Please remember that you’ll be annotating the original post, not the response.</b> The response is shown only because it may provide useful context.</p>
+        <p><b>Q1.</b> You’ll rate how empowering or disempowering the post is.</p>
+        <p><b>Q1-2.</b> You'll select whether the given post could be interpreted as either empowering or disempowering depending on what the poster meant.</p>
+        <p><b>Q2.</b> You’ll also be asked to select which reasons the post would empower or disempower the reader; if the post is empowering, select the ideas that the post supports, and if it's disempowering, select the ideas that the post goes against.</p>
+        <p><b>Q3.</b> You’ll be asked whether the poster and reader agree / share a similar perspective, or if they disagree / have opposing perspectives.</p>
+        
+        Here is the definition of each option in each question:
+        
+        <h1>Q1 Definitions</h1>
+        <p><b>Empowering</b>: A post is empowering if it supports the reader’s rights, choices, self-fulfillment, or self-esteem. Empowering posts imply one or more of the following things about the reader, whether intentionally or unintentionally.</p>
+        <p><b>Disempowering</b>: A post is disempowering if it actively goes against the empowerment of the reader. This can mean denying their right to make choices, assuming they are ignorant, putting words in their mouth, imposing a point of view, drawing conclusions about their character.</p>
+        <p><b>Neutral</b>: A post is neutral if it does not contain any implications about the reader’s capability, power, etc. Text that only describes situations or expresses an opinion about an external topic is usually neutral. </p>
+
+        <h1>Q2 Definitions</h1>
+        <p>If you labeled a post as empowering or disempowering, select all reasons that explain why you think it is empowering/disempowering: </p>
+        <ol>
+            <li><b>Decision-making power</b>: The reader has the power to make their own decisions or influence decisions that affect them.</li>
+            <li><b>Range of options to choose from</b>: The reader has a range of options from which to make choices. They are not restricted to only having a few limited options.</li>
+            <li><b>Can be assertive</b>: The reader can be assertive and confidently express what they want, need, prefer, like, or dislike.</li>
+            <li><b>Has rights</b>: The reader has rights. It can also mean broader rights, such as the right for everyone to be treated with dignity and respect.</li>
+            <li><b>Capable of creating change</b>: The reader is capable of creating change in their life or community.</li>
+            <li><b>Can make a difference</b>: The reader feels that they can make a difference as an individual.</li>
+            <li><b>Critical thinking and diverse perspectives</b>: The reader can think critically and see things from different perspectives.</li>
+            <li><b>Express their emotions</b>: The reader can express their own emotions, like anger and sadness, in a healthy way.</li>
+            <li><b>Not alone</b>: The reader feels that they are part of a group. </li>
+            <li><b>Learn new things</b>: The reader is able to learn new knowledge and skills.</li>
+            <li><b>Change perceptions of their competency</b>: The reader can change how others perceive them / their competency and capacity.</li>
+            <li><b>Express their true self</b>: The reader can come out of the closet / express who they really are.</li>
+            <li><b>Grow continuously</b>: The reader can grow and change continuously and on their own volition.</li>
+            <li><b>Positive self-image</b>: The reader can increase their positive self-image and feel good about themselves.</li>
+        </ol>
+
+        <h1>Q3 Definitions</h1>
+        <p>For each poster and reader, we want to know whether they agree or disagree with each other on the topic of discussion.</p>
+        <p><b>Agree</b>: poster and reader support the same stance / point of view on the topic, whether they are talking about politics, sports teams, music preferences, or any other topic that they could take sides on. </p>
+        <p><b>Disagree</b>: they take opposing sides. </p>
+        <p><b>Neutral</b>: If the topic is not debatable (e.g. facts about the weather today) and / or there’s no indication that the poster and reader have any stance on the topic.</p>
+
+    </short-instructions>
+</crowd-form>
